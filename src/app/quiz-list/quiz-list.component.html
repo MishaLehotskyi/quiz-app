@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="col-xs-12 center">
+    <a class="list-group-item clearfix">
+      <div class="pull-left">
+        <h4 class="list-group-item-heading">Quiz name : Random quiz</h4>
+      </div>
+      <span class="pull-right">
+    <button  (click)="onLucky()" type="button" class="btn-success">I'm Lucky</button>
+      </span>
+    </a>
+    <app-quiz-item *ngFor="let quizitem of newData, let i = index"
+                   [quiz]="quizitem"
+                   [index]="i"></app-quiz-item>
+  </div>
+</div>

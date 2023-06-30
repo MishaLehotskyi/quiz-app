@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="card">
+    <div class="d-flex justify-content-around py-3">
+      <div class="score">
+        <h5>{{scores}} Points</h5>
+      </div>
+      <div class="question-remain">
+        <span>Question {{currentQuestion+1}} of {{quiz.length}}</span>
+      </div>
+      <div class="quit">
+        <button routerLink="/" (click)="onCancel()" class="btn-danger">Quit quiz</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="question-card">
+        <h3 class="center">{{quiz[currentQuestion].question}}</h3>
+      </div>
+    </div>
+    <div #elements class="options">
+      <ol *ngFor="let answer of quiz[currentQuestion].answers">
+        <li class="pointer" #li (click)="onAnswer(currentQuestion,answer,elements,li,button)">
+          <div class="card">
+            {{answer}}
+          </div>
+        </li>
+      </ol>
+    </div>
+    <div  class="d-flex justify-content-center">
+      <button [disabled]="true" #button class="btn-primary" (click)="onNext(elements,button)">Next</button>
+      <button *ngIf="quizIsDone" class="btn-primary" routerLink="/result">Show results</button>
+    </div>
+  </div>
+</div>

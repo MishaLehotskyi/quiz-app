@@ -1,0 +1,9 @@
+<a class="list-group-item clearfix">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">Quiz name : {{quiz.results[0].category}}</h4>
+    <p class="list-group-item-text">Questions : {{quiz.results.length}}</p>
+  </div>
+  <span class="pull-right">
+    <button type="button" class="btn-primary" (click)="onClick()" [routerLink]="['/play/'+index]">Play</button>
+  </span>
+</a>

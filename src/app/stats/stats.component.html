@@ -1,0 +1,14 @@
+<div *ngIf="numberOfQuizzes === 0" class="container d-flex justify-content-center">
+  <h3>You have no statistics yet =( <br>Go to the home page and play a quiz to see statistics</h3>
+</div>
+<div *ngIf="!(numberOfQuizzes === 0)" class="container d-flex column center">
+  <div class="stats-card center">
+    <h3>Your stats :</h3>
+  <p>You have already completed {{numberOfQuizzes}} quizzes</p>
+  <p>You have already answered {{numberOfQuestions}} questions</p>
+  <p>Your average time of answering quizzes is {{averageTimePerQuiz}} seconds</p>
+  </div>
+  <div class="pie-card center">
+    <apx-chart [series]="chartSeries" [chart]="chartDetails" [labels]="chartLabels" [title]="chartTitle"></apx-chart>
+  </div>
+</div>
