@@ -12,7 +12,7 @@ const router: Routes = [{path: '', redirectTo: '/quiz-list', pathMatch: 'full'},
   {path: 'stats', component: StatsComponent}];
 
 @NgModule({
-  imports : [RouterModule.forRoot(router)],
+  imports : [RouterModule.forRoot(router, {useHash : true})],
   exports : [RouterModule]
 })
 export class AppRoutingModule{
