@@ -37,6 +37,6 @@ export class StatsService{
     let overallTime: number = 0;
     let overallQuizzes : number = this.getNumberOfQuizzes();
     this.resultsArr.forEach((el)=>{overallTime += el.time});
-    return overallTime/overallQuizzes;
+    return Number((overallTime/overallQuizzes).toFixed(2));
   }
 }
