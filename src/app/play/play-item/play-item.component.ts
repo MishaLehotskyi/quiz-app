@@ -12,6 +12,7 @@ import {SelectService} from "../../select.service";
 import {Quiz} from "../../quiz.model";
 import {interval} from "rxjs";
 import {ResultService} from "../../result.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-play-item',
@@ -26,9 +27,8 @@ export class PlayItemComponent implements OnInit,AfterViewInit{
   counter: number = 0;
   correctAnswers: number = 0;
   interval$: any;
-  quizIsDone: boolean = false;
   serializedEls: string = '';
-  constructor(private selectService: SelectService,private resultService: ResultService) {
+  constructor(private selectService: SelectService,private resultService: ResultService,public router: Router) {
   }
 
   ngOnInit(): void {
@@ -54,10 +54,9 @@ export class PlayItemComponent implements OnInit,AfterViewInit{
       this.scores -=10;
     }
     if(isLastQuestion){
-      this.quizIsDone = true;
-      button.disabled = this.quizIsDone;
       this.resultService.getResults(this.scores,this.correctAnswers,this.counter,this.quiz.length);
       this.stopCounter();
+      this.router.navigate(['/result']);
     }
   }
 
