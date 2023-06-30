@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+body
+{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.justify-content-around{
+  flex-direction: row;
+  justify-content: space-around;
+}
+justify-content-between{
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.justify-content-center{
+  justify-content: center;
+}
+.card{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid lightgrey;
+}
+.question-card{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+.pie-card{
+  max-width: 800px;
+  padding: 10px;
+}
+.stats-card{
+  max-width: 800px;
+  padding: 10px;
+  border: 1px solid lightgrey;
+}
+li{
+  list-style-type: none;
+  cursor: pointer;
+  margin: 10px 0;
+}
+li .card:hover{
+  border: 1px solid blue;
+}
+ol{
+  padding: 0;
+}
+
+.container{
+  border: 1px darkgray;
+}
+
+.rotate{
+  transform: scale(-1, 1);
+}
+.center{
+  margin: 0 auto;
+}
+
+.column{
+  flex-direction: column;
+}
+.pointer{
+  cursor: pointer;
+}
