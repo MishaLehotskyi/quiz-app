@@ -44,7 +44,7 @@ export class PlayItemComponent implements OnInit,AfterViewInit{
     elements.style.pointerEvents = 'none';
     if(isCorrect){
       this.scores += 10;
-      this.correctAnswers +=1;
+      this.correctAnswers ++;
       li.style.backgroundColor = 'green';
     }
     if(!isCorrect){
