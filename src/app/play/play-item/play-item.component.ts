@@ -42,12 +42,6 @@ export class PlayItemComponent implements OnInit,AfterViewInit{
     let isZero : boolean = this.scores === 0;
     button.disabled = false;
     elements.style.pointerEvents = 'none';
-    if(isLastQuestion){
-      this.quizIsDone = true;
-      button.disabled = this.quizIsDone;
-      this.resultService.getResults(this.scores,this.correctAnswers,this.counter,this.quiz.length);
-      this.stopCounter();
-    }
     if(isCorrect){
       this.scores += 10;
       this.correctAnswers +=1;
@@ -58,6 +52,12 @@ export class PlayItemComponent implements OnInit,AfterViewInit{
     }
     if(!isCorrect && !isZero){
       this.scores -=10;
+    }
+    if(isLastQuestion){
+      this.quizIsDone = true;
+      button.disabled = this.quizIsDone;
+      this.resultService.getResults(this.scores,this.correctAnswers,this.counter,this.quiz.length);
+      this.stopCounter();
     }
   }
 
