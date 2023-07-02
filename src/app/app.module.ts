@@ -11,10 +11,10 @@ import { PlayItemComponent } from './play/play-item/play-item.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { ResultsComponent } from './results/results.component';
 import { StatsComponent } from './stats/stats.component';
-import {DataService} from "./data.service";
-import {SelectService} from "./select.service";
-import {ResultService} from "./result.service";
-import {StatsService} from "./stats.service";
+import {DataService} from "./services/data.service";
+import {SelectService} from "./services/select.service";
+import {ResultService} from "./services/result.service";
+import {StatsService} from "./services/stats.service";
 import {NgApexchartsModule} from "ng-apexcharts";
 
 @NgModule({

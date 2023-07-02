@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
-import {Data} from "../../data.model";
-import {SelectService} from "../../select.service";
+import {Data} from "../../models/data.model";
+import {SelectService} from "../../services/select.service";
 
 @Component({
   selector: 'app-quiz-item',

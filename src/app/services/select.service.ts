@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {Quiz} from "./quiz.model";
+import {Quiz} from "../models/quiz.model";
 @Injectable()
 export class SelectService{
 

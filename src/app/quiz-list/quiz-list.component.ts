@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {DataService} from "../data.service";
-import {Data} from "../data.model";
-import {SelectService} from "../select.service";
+import {DataService} from "../services/data.service";
+import {Data} from "../models/data.model";
+import {SelectService} from "../services/select.service";
 import {Router} from "@angular/router";
 
 @Component({

@@ -8,10 +8,10 @@ import {
   ViewChild,
   ViewChildren
 } from '@angular/core';
-import {SelectService} from "../../select.service";
-import {Quiz} from "../../quiz.model";
+import {SelectService} from "../../services/select.service";
+import {Quiz} from "../../models/quiz.model";
 import {interval} from "rxjs";
-import {ResultService} from "../../result.service";
+import {ResultService} from "../../services/result.service";
 import {Router} from "@angular/router";
 
 @Component({
